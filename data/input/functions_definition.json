@@ -52,16 +52,18 @@
   },
   {
     "name": "fn_substitute_string_with_regex",
-    "description": "Replace all occurrences matching a regex pattern in a string.",
+    "description": "Replace all occurrences matching a regex pattern in a string. The regex parameter must be a valid regex pattern (e.g., '([0-9]+)' to match numbers), and replacement is the string to replace matches with (e.g., 'NUMBERS'). Example: regex='([0-9]+)' in 'Hello 34 I\\'m 233 years old' with replacement='NUM' returns 'Hello NUM I\\'m NUM years old'.",
     "parameters": {
       "source_string": {
         "type": "string"
       },
       "regex": {
-        "type": "string"
+        "type": "string",
+        "description": "Valid regex pattern like ([0-9]+), [a-z]+, \\\\d+, etc."
       },
       "replacement": {
-        "type": "string"
+        "type": "string",
+        "description": "String to replace matches with"
       }
     },
     "returns": {
